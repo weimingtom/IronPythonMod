@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0C16C7F-80B9-47DD-965F-211B61F2329B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IronPython</RootNamespace>
+    <AssemblyName>IronPython</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeDom\CodeMerger.cs" />
+    <Compile Include="CodeDom\Compiler.cs" />
+    <Compile Include="CodeDom\Generator.cs" />
+    <Compile Include="CodeDom\Parser.cs" />
+    <Compile Include="CodeDom\Provider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CodeDom\References.cs" />
+    <Compile Include="CodeDom\Walker.cs" />
+    <Compile Include="Compiler\AssemblyGen.cs" />
+    <Compile Include="Compiler\Binder.cs" />
+    <Compile Include="Compiler\ClassDef.cs" />
+    <Compile Include="Compiler\CodeGen.cs" />
+    <Compile Include="Compiler\CompilerContext.cs" />
+    <Compile Include="Compiler\CompilerHelpers.cs" />
+    <Compile Include="Compiler\EnvironmentFactory.cs" />
+    <Compile Include="Compiler\EnvironmentNamespace.cs" />
+    <Compile Include="Compiler\EnvironmentReference.cs" />
+    <Compile Include="Compiler\Expressions.cs" />
+    <Compile Include="Compiler\FlowChecker.cs" />
+    <Compile Include="Compiler\FuncDef.cs" />
+    <Compile Include="Compiler\FuncDef.Generated.cs" />
+    <Compile Include="Compiler\MethodTracker.cs" />
+    <Compile Include="Compiler\Name.cs" />
+    <Compile Include="Compiler\NameConverter.cs" />
+    <Compile Include="Compiler\NameEnv.cs" />
+    <Compile Include="Compiler\Namespace.cs" />
+    <Compile Include="Compiler\NewTypeMaker.cs" />
+    <Compile Include="Compiler\Node.cs" />
+    <Compile Include="Compiler\Operator.cs" />
+    <Compile Include="Compiler\Operator.Generated.cs" />
+    <Compile Include="Compiler\Options.cs" />
+    <Compile Include="Compiler\OutputGenerator.cs" />
+    <Compile Include="Compiler\Parser.cs" />
+    <Compile Include="Compiler\ParserSink.cs" />
+    <Compile Include="Compiler\ReflectOptimizer.cs" />
+    <Compile Include="Compiler\ScopeStatement.cs" />
+    <Compile Include="Compiler\ScopeStatement.Generated.cs" />
+    <Compile Include="Compiler\Slot.cs" />
+    <Compile Include="Compiler\SlotFactory.cs" />
+    <Compile Include="Compiler\Statements.cs" />
+    <Compile Include="Compiler\Token.cs" />
+    <Compile Include="Compiler\Tokenizer.cs" />
+    <Compile Include="Compiler\Tokenizer.Generated.cs" />
+    <Compile Include="Compiler\TokenKind.Generated.cs" />
+    <Compile Include="Compiler\TypeGen.cs" />
+    <Compile Include="Compiler\Walker.Generated.cs" />
+    <Compile Include="Console\PythonCommandLine.cs" />
+    <Compile Include="Console\SuperConsole.cs" />
+    <Compile Include="Hosting\CompilerSink.cs" />
+    <Compile Include="Hosting\IConsole.cs" />
+    <Compile Include="Hosting\PythonCompiler.cs" />
+    <Compile Include="Hosting\PythonEngine.cs" />
+    <Compile Include="Math\BigInteger.cs" />
+    <Compile Include="Math\Complex64.cs" />
+    <Compile Include="Modules\binascii.cs" />
+    <Compile Include="Modules\Builtin.cs" />
+    <Compile Include="Modules\Builtin.Generated.cs" />
+    <Compile Include="Modules\clr.cs" />
+    <Compile Include="Modules\codecs.cs" />
+    <Compile Include="Modules\collections.cs" />
+    <Compile Include="Modules\cStringIO.cs" />
+    <Compile Include="Modules\datetime.cs" />
+    <Compile Include="Modules\errno.cs" />
+    <Compile Include="Modules\Exceptions.cs" />
+    <Compile Include="Modules\Exceptions.Generated.cs" />
+    <Compile Include="Modules\gc.cs" />
+    <Compile Include="Modules\imp.cs" />
+    <Compile Include="Modules\IterTools.cs" />
+    <Compile Include="Modules\marshal.cs" />
+    <Compile Include="Modules\math.cs" />
+    <Compile Include="Modules\math.Generated.cs" />
+    <Compile Include="Modules\nt.cs" />
+    <Compile Include="Modules\operator.cs" />
+    <Compile Include="Modules\re.cs" />
+    <Compile Include="Modules\struct.cs" />
+    <Compile Include="Modules\thread.cs" />
+    <Compile Include="Modules\time.cs" />
+    <Compile Include="Modules\_random.cs" />
+    <Compile Include="Modules\_sre.cs" />
+    <Compile Include="Modules\_weakref.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runtime\ArrayOps.cs" />
+    <Compile Include="Runtime\Attributes.cs" />
+    <Compile Include="Runtime\BoolOps.cs" />
+    <Compile Include="Runtime\BuiltinFunction.cs" />
+    <Compile Include="Runtime\BuiltinFunction.Generated.cs" />
+    <Compile Include="Runtime\ComObject.cs" />
+    <Compile Include="Runtime\ComplexOps.cs" />
+    <Compile Include="Runtime\ComplexOps.Generated.cs" />
+    <Compile Include="Runtime\ConversionWrappers.cs" />
+    <Compile Include="Runtime\Converter.cs" />
+    <Compile Include="Runtime\Converter.Generated.cs" />
+    <Compile Include="Runtime\CustomTypeDescHelpers.cs" />
+    <Compile Include="Runtime\DecimalOps.cs" />
+    <Compile Include="Runtime\DefaultContext.cs" />
+    <Compile Include="Runtime\Descriptors.cs" />
+    <Compile Include="Runtime\Dict.cs" />
+    <Compile Include="Runtime\DictComparers.cs" />
+    <Compile Include="Runtime\DynamicType.cs" />
+    <Compile Include="Runtime\DynamicType.Generated.cs" />
+    <Compile Include="Runtime\Enumerate.cs" />
+    <Compile Include="Runtime\EnumOps.cs" />
+    <Compile Include="Runtime\ExceptionConverter.cs" />
+    <Compile Include="Runtime\FloatOps.cs" />
+    <Compile Include="Runtime\FloatOps.Generated.cs" />
+    <Compile Include="Runtime\Frame.cs" />
+    <Compile Include="Runtime\Function.cs" />
+    <Compile Include="Runtime\Function.Generated.cs" />
+    <Compile Include="Runtime\FunctionEnvironment.cs" />
+    <Compile Include="Runtime\FunctionEnvironment.Generated.cs" />
+    <Compile Include="Runtime\Generator.cs" />
+    <Compile Include="Runtime\IdDispenser.cs" />
+    <Compile Include="Runtime\Importer.cs" />
+    <Compile Include="Runtime\InstanceOps.cs" />
+    <Compile Include="Runtime\Int64Ops.cs" />
+    <Compile Include="Runtime\Int64Ops.Generated.cs" />
+    <Compile Include="Runtime\Interfaces.cs" />
+    <Compile Include="Runtime\Interfaces.Generated.cs" />
+    <Compile Include="Runtime\IntOps.cs" />
+    <Compile Include="Runtime\IntOps.Generated.cs" />
+    <Compile Include="Runtime\KwArgBinder.cs" />
+    <Compile Include="Runtime\List.cs" />
+    <Compile Include="Runtime\LiteralParser.cs" />
+    <Compile Include="Runtime\LongOps.cs" />
+    <Compile Include="Runtime\LongOps.Generated.cs" />
+    <Compile Include="Runtime\OldClass.cs" />
+    <Compile Include="Runtime\OldClass.Generated.cs" />
+    <Compile Include="Runtime\Ops.cs" />
+    <Compile Include="Runtime\Ops.Generated.cs" />
+    <Compile Include="Runtime\OpsReflectedType.cs" />
+    <Compile Include="Runtime\ParamTree.cs" />
+    <Compile Include="Runtime\PerfTrack.cs" />
+    <Compile Include="Runtime\Publisher.cs" />
+    <Compile Include="Runtime\PythonBuffer.cs" />
+    <Compile Include="Runtime\PythonException.cs" />
+    <Compile Include="Runtime\PythonException.Generated.cs" />
+    <Compile Include="Runtime\PythonFile.cs" />
+    <Compile Include="Runtime\PythonModule.cs" />
+    <Compile Include="Runtime\PythonType.cs" />
+    <Compile Include="Runtime\ReflectedAssembly.cs" />
+    <Compile Include="Runtime\ReflectedMembers.cs" />
+    <Compile Include="Runtime\ReflectedMethod.cs" />
+    <Compile Include="Runtime\ReflectedMethod.Generated.cs" />
+    <Compile Include="Runtime\ReflectedPackage.cs" />
+    <Compile Include="Runtime\ReflectedType.cs" />
+    <Compile Include="Runtime\ReflectedType.Generated.cs" />
+    <Compile Include="Runtime\ReflectionUtil.cs" />
+    <Compile Include="Runtime\Set.cs" />
+    <Compile Include="Runtime\Slice.cs" />
+    <Compile Include="Runtime\StringFormatter.cs" />
+    <Compile Include="Runtime\StringOps.cs" />
+    <Compile Include="Runtime\Super.cs" />
+    <Compile Include="Runtime\SymbolTable.cs" />
+    <Compile Include="Runtime\SymbolTable.Generated.cs" />
+    <Compile Include="Runtime\SystemState.cs" />
+    <Compile Include="Runtime\TraceBack.cs" />
+    <Compile Include="Runtime\Tuple.cs" />
+    <Compile Include="Runtime\TypeCache.Generated.cs" />
+    <Compile Include="Runtime\Uninitialized.cs" />
+    <Compile Include="Runtime\UserType.cs" />
+    <Compile Include="Runtime\UserType.Generated.cs" />
+    <Compile Include="Runtime\WeakHash.cs" />
+    <Compile Include="Runtime\WeakRef.cs" />
+    <Compile Include="Runtime\XRange.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
