@@ -19,6 +19,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Diagnostics;
 
 using System.Reflection;
 using System.Reflection.Emit;
@@ -1776,6 +1777,7 @@ namespace IronPython.Runtime {
         }
 
         public static void Print(SystemState state, object o) {
+            Debug.WriteLine("======Print");
             PrintWithDest(state, state.stdout, o);
         }
 

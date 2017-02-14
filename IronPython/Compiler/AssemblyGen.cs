@@ -45,6 +45,7 @@ namespace IronPython.Compiler {
 
         public AssemblyGen(string moduleName, string outDir, string outFile, bool emitDebugInfo,
             PortableExecutableKinds peKind, ImageFileMachine machine) {
+                Debug.WriteLine("===============outFileName=" + outFile);
             this.outFileName = outFile;
             this.outDir = outDir;
             this.emitDebugInfo = emitDebugInfo;
@@ -118,6 +119,7 @@ namespace IronPython.Compiler {
             }
         }
         public Assembly DumpAndLoad() {
+            Debug.WriteLine("=====DumpAndLoad");
             if (!Options.SaveAndReloadBinaries) {
                 return myAssembly;
             }

@@ -68,6 +68,11 @@ namespace IronPython.Runtime {
             ModuleName = name;
             __dict__[SymbolTable.Builtins] = TypeCache.Builtin;
 
+            if (name == "__main__")
+            {
+                Debug.WriteLine("==========__main__");
+            }
+
             initialize = init;
 
             contextFlags = callerContextFlags;
